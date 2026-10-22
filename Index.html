@@ -176,9 +176,206 @@ footer{background:#050505;border-top:1px solid var(--line);padding:45px 0 25px}
  .stat-row{gap:20px;flex-wrap:wrap}.stat strong{font-size:24px}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* ===== REDISEÑO PREMIUM · BUSINESS AND WINNERS ===== */
+:root{
+  --bg:#080908;
+  --panel:#10110f;
+  --panel2:#171813;
+  --white:#f7f4ec;
+  --muted:#aaa79d;
+  --gold:#c6a568;
+  --gold2:#ead8ad;
+  --line:rgba(214,190,139,.2);
+  --max:1380px;
+}
+body{background:var(--bg);letter-spacing:.005em}
+.wrap{width:min(var(--max),calc(100% - 88px))}
+.topline{height:2px}
+header{background:rgba(8,9,8,.82);backdrop-filter:blur(22px);border-bottom:1px solid rgba(234,216,173,.13)}
+.nav{height:92px}
+.brand{min-width:250px;gap:14px}
+.brand-logo{max-width:205px;max-height:58px;width:auto;height:auto;object-fit:contain}
+.brand.logo-ready .brand-logo{display:block}
+.brand.logo-ready .brand-name,.brand.logo-ready .brand-mark{display:none}
+.brand-name{font-size:18px}
+.navlinks{gap:clamp(16px,2.2vw,32px)}
+.navlinks a{font-size:10px;letter-spacing:.15em;color:#e4e0d7}
+.btn{padding:16px 23px;min-height:49px;letter-spacing:.14em;font-size:10px;box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.btn:not(.outline){background:linear-gradient(135deg,#d8bd83,#b18b4b);border-color:#c6a568}
+.btn:hover{box-shadow:0 12px 32px rgba(198,165,104,.15)}
+.btn.outline{border-color:rgba(234,216,173,.48);background:rgba(10,10,8,.16)}
+.hero{height:min(840px,calc(100svh - 92px));min-height:680px;background:#11120f}
+.hero-bg img{object-position:center 55%;filter:brightness(.67) saturate(.8);animation:heroZoom 22s ease-in-out infinite alternate}
+.hero:after{background:linear-gradient(90deg,rgba(5,6,5,.94) 0%,rgba(5,6,5,.78) 32%,rgba(5,6,5,.28) 68%,rgba(5,6,5,.05) 100%),linear-gradient(0deg,#080908 0%,transparent 24%,rgba(0,0,0,.08) 100%)}
+.hero-content{width:min(var(--max),calc(100% - 88px));padding:70px 0 110px}
+.hero-copy{max-width:760px}
+.hero .eyebrow{margin-bottom:30px}
+.eyebrow{letter-spacing:.24em;font-size:10px}
+.hero h1{font-size:clamp(58px,7.2vw,108px);line-height:.98;letter-spacing:-.055em;max-width:850px;margin-bottom:29px}
+.hero h1 em{color:var(--gold2);font-style:normal}
+.hero p{font-size:16px;line-height:1.9;max-width:570px;color:#e0ddd4}
+.hero-actions{gap:14px}
+.hero-index{color:rgba(234,216,173,.75);letter-spacing:.32em}
+.hero-meta{bottom:42px;gap:30px;font-size:9px}
+.searchbar{background:#11120f;border-color:rgba(214,190,139,.24)}
+.search-inner{grid-template-columns:1.15fr 1fr 1fr auto}
+.search-field{padding:22px 26px}
+.search-field label{font-size:9px;letter-spacing:.2em}
+.search-field input,.search-field select{font-size:14px}
+.search-inner .btn{margin:12px 14px}
+.section{padding:118px 0}
+.section-head{margin-bottom:42px}
+h2{font-size:clamp(42px,4.6vw,68px);line-height:1.04;letter-spacing:-.045em}
+.lead{font-size:15px;line-height:1.85;max-width:610px}
+.intro-grid{gap:clamp(55px,8vw,120px)}
+.intro-visual{height:590px}
+.intro-visual img{filter:saturate(.82);object-position:center}
+.visual-frame{left:-22px;bottom:-22px;border-color:rgba(198,165,104,.8)}
+.visual-caption{right:-26px;bottom:38px;padding:20px 24px;font-size:20px;box-shadow:0 16px 40px rgba(0,0,0,.2)}
+.intro-copy p{font-size:14px;line-height:2}
+.stat-row{gap:clamp(18px,3vw,42px);margin-top:38px}
+.stat strong{font-size:31px}
+.category-section,.services{background:linear-gradient(180deg,#10110f 0%,#0c0d0b 100%)}
+.category-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.category-card{height:430px;background:#181915;border:1px solid rgba(234,216,173,.12)}
+.category-card img{filter:brightness(.76) saturate(.78);transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .5s}
+.category-card:hover img{transform:scale(1.075);filter:brightness(.92) saturate(.95)}
+.category-card:after{background:linear-gradient(0deg,rgba(3,4,3,.96) 0%,rgba(3,4,3,.48) 35%,transparent 78%)}
+.cat-number{top:21px;left:21px;color:var(--gold2);letter-spacing:.2em}
+.cat-content{left:24px;right:24px;bottom:25px}
+.cat-content h3{font-size:clamp(25px,2.4vw,34px);line-height:1.08}
+.cat-content p{font-size:12px;line-height:1.7;color:#d0ccc2;min-height:40px}
+.cat-link{border-color:rgba(234,216,173,.35);letter-spacing:.17em}
+.cat-link b{transition:transform .25s}
+.category-card:hover .cat-link b{transform:translate(3px,-3px)}
+.featured-grid{gap:20px}
+.listing{background:#11120f;border-color:rgba(234,216,173,.12);overflow:hidden}
+.listing-image{height:290px}
+.listing-image img{filter:saturate(.88);transition:transform .7s}
+.listing:hover{border-color:rgba(198,165,104,.65);transform:translateY(-7px)}
+.listing-body{padding:24px}
+.listing h3{font-size:28px;line-height:1.1}
+.listing p{line-height:1.8;font-size:12px}
+.tag{background:rgba(8,9,8,.83);backdrop-filter:blur(10px);border-color:rgba(234,216,173,.28)}
+.save{backdrop-filter:blur(8px)}
+.service-grid{gap:1px;margin-top:46px;background:rgba(214,190,139,.22);border-color:rgba(214,190,139,.22)}
+.service{padding:39px 34px;background:#10110f;min-height:245px;transition:background .3s}
+.service:hover{background:#171813}
+.service-icon{width:48px;height:48px;border-color:rgba(198,165,104,.75);font-size:21px}
+.service h3{font-size:28px}
+.service p{font-size:13px;line-height:1.9}
+.sell-section{background:#151611;min-height:600px}
+.sell-image{min-height:520px}
+.sell-image img{filter:brightness(.76) saturate(.78)}
+.sell-copy{padding:80px clamp(42px,7.4vw,115px)}
+.sell-copy h2{font-size:clamp(42px,4.4vw,64px)}
+.sell-copy p{font-size:14px;line-height:1.95}
+.sell-points li{padding:14px 0;font-size:13px;border-color:rgba(234,216,173,.13)}
+.quote-band{padding:94px 0;background:radial-gradient(ellipse at center,rgba(198,165,104,.07),transparent 66%);border-color:rgba(214,190,139,.18)}
+.quote-band blockquote{font-size:clamp(32px,4.2vw,56px);letter-spacing:-.035em;line-height:1.22}
+.contact-grid{gap:clamp(45px,8vw,120px)}
+.contact-info p{font-size:14px;line-height:1.9}
+.contact-detail{padding:18px 0;border-color:rgba(234,216,173,.13)}
+.contact-form{gap:16px}
+.form-field label{letter-spacing:.17em}
+.form-field input,.form-field select,.form-field textarea{background:#11120f;border-color:rgba(234,216,173,.19);padding:16px;border-radius:0}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--gold2);box-shadow:0 0 0 3px rgba(198,165,104,.08)}
+footer{background:#050605;padding:55px 0 27px}
+.footer-top{padding-bottom:42px}
+.footer-blurb{line-height:1.9}
+.footer-links a{transition:color .2s}
+.footer-links a:hover{color:var(--gold2)}
+.wa-float{width:58px;height:58px;background:linear-gradient(135deg,#e3c98f,#b28d4f);box-shadow:0 10px 34px rgba(0,0,0,.42)}
+.reveal{transform:translateY(30px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.toast{box-shadow:0 12px 40px rgba(0,0,0,.3)}
+@media(max-width:1100px){
+ .wrap{width:calc(100% - 52px)}
+ .hero-content{width:calc(100% - 52px)}
+ .brand{min-width:200px}.brand-logo{max-width:175px}
+ .navlinks{gap:16px}
+ .category-card{height:370px}
+ .intro-grid{gap:55px}
+}
+@media(max-width:760px){
+ .wrap{width:calc(100% - 38px)}
+ .nav{height:74px}
+ .brand{min-width:0}.brand-logo{max-width:164px;max-height:48px}
+ .navlinks{top:74px;background:rgba(8,9,8,.98);padding:16px 22px 23px}
+ .hero{height:calc(100svh - 74px);min-height:610px;max-height:780px}
+ .hero-bg img{object-position:62% center}
+ .hero:after{background:linear-gradient(90deg,rgba(5,6,5,.9),rgba(5,6,5,.53)),linear-gradient(0deg,#080908 0%,transparent 42%)}
+ .hero-content{width:calc(100% - 38px);padding:42px 0 82px}
+ .hero .eyebrow{font-size:9px;letter-spacing:.17em;margin-bottom:23px}
+ .hero h1{font-size:clamp(48px,12.2vw,74px);line-height:1.01;margin-bottom:22px}
+ .hero p{font-size:14px;line-height:1.8;margin-bottom:27px;max-width:440px}
+ .hero-actions{gap:11px}
+ .hero-actions .btn{width:100%}
+ .hero-meta{display:none}
+ .section{padding:78px 0}
+ .intro-grid{gap:45px}
+ .intro-visual{height:390px;margin:0 10px 10px 0}
+ .visual-frame{left:-10px;bottom:-10px}
+ .visual-caption{right:-8px;bottom:18px;padding:15px 17px;font-size:16px;max-width:170px}
+ .section-head{margin-bottom:29px}
+ h2{font-size:clamp(38px,10vw,52px)}
+ .category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .category-card{height:315px}
+ .cat-content{left:14px;right:14px;bottom:16px}
+ .cat-content h3{font-size:24px}
+ .cat-content p{font-size:10px;line-height:1.55;min-height:48px;margin-bottom:13px}
+ .cat-number{left:14px;top:13px;font-size:9px}
+ .cat-link{font-size:8px}
+ .featured-grid{grid-template-columns:1fr;gap:15px}
+ .listing-image{height:265px}
+ .listing-body{padding:21px}
+ .service-grid{margin-top:30px}
+ .service{padding:27px;min-height:0}
+ .sell-image{min-height:320px}
+ .sell-copy{padding:53px 22px 60px}
+ .quote-band{padding:70px 0}
+ .quote-band blockquote{font-size:clamp(30px,8vw,42px)}
+ .contact-grid{gap:32px}
+ .footer-top,.footer-bottom{gap:25px}
+ .wa-float{right:16px;bottom:16px;width:52px;height:52px}
+}
+@media(max-width:390px){
+ .category-card{height:285px}
+ .cat-content h3{font-size:21px}
+ .cat-content p{font-size:9px}
+ .brand-logo{max-width:145px}
+}
+
+
+
+.category-grid-two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1050px;margin:0 auto}
+.category-grid-two .category-card{height:500px}
+.service-grid-four{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1000px){.service-grid-four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.category-grid-two{grid-template-columns:1fr}.category-grid-two .category-card{height:380px}.service-grid-four{grid-template-columns:1fr}}
+/* ===== MENÚ DESPLEGABLE DE CATÁLOGO ===== */
+.nav-catalog{position:relative;display:flex;align-items:center;height:100%}
+.nav-catalog-trigger{display:inline-flex;align-items:center;gap:8px;font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#e4e0d7;cursor:pointer;background:none;border:0;padding:16px 0}
+.nav-catalog-trigger:hover,.nav-catalog-trigger[aria-expanded="true"]{color:var(--gold2)}
+.nav-catalog-trigger .chevron{font-size:13px;transition:transform .2s}
+.nav-catalog-trigger[aria-expanded="true"] .chevron{transform:rotate(180deg)}
+.catalog-dropdown{position:absolute;top:calc(100% - 10px);left:-18px;min-width:205px;padding:9px;background:rgba(12,13,11,.98);border:1px solid rgba(234,216,173,.22);box-shadow:0 18px 45px rgba(0,0,0,.4);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s;z-index:80}
+.nav-catalog.dropdown-open .catalog-dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.catalog-dropdown a{display:block;padding:14px 13px;font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#e7e2d8;border-bottom:1px solid rgba(255,255,255,.08)}
+.catalog-dropdown a:last-child{border-bottom:0}
+.catalog-dropdown a:hover{color:var(--gold2);background:rgba(198,165,104,.08)}
+@media(max-width:760px){
+ .nav-catalog{display:block;height:auto}
+ .nav-catalog-trigger{width:100%;justify-content:space-between;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+ .catalog-dropdown{position:static;display:none;min-width:0;padding:4px 0 7px;border:0;box-shadow:none;background:transparent;opacity:1;visibility:visible;transform:none}
+ .nav-catalog.dropdown-open .catalog-dropdown{display:block}
+ .catalog-dropdown a{padding:13px 15px;border-bottom:0;color:#c9c3b6}
+}
+
 </style>
 </head>
 <body>
+<!-- IMÁGENES: fotografías provisionales cargadas desde Unsplash. LOGO: pega la URL pública directa de tu nube en LOGO_URL, al final del archivo. -->
 <div class="topline"></div>
 <header>
   <div class="wrap nav">
@@ -189,7 +386,7 @@ footer{background:#050505;border-top:1px solid var(--line);padding:45px 0 25px}
       <div class="brand-name"><small>&nbsp;</small></div>
     </a>
     <nav class="navlinks" id="navlinks">
-      <a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a><a href="#catalogo">Catálogo</a><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a>
+      <a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a><div class="nav-catalog" id="navCatalog"><button class="nav-catalog-trigger" id="catalogToggle" aria-expanded="false" aria-controls="catalogDropdown">Catálogo <span class="chevron">⌄</span></button><div class="catalog-dropdown" id="catalogDropdown"><a href="#joyas">Joyas</a><a href="#vehiculos">Vehículos</a></div></div><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a>
     </nav>
     <a class="btn nav-cta" href="#vender">Vender mi bien <span class="arrow">↗</span></a>
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
@@ -201,9 +398,9 @@ footer{background:#050505;border-top:1px solid var(--line);padding:45px 0 25px}
   <div class="hero-bg"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90" alt="Residencia contemporánea de lujo al anochecer"></div>
   <div class="hero-content">
     <div class="hero-copy">
-      <div class="eyebrow">Una nueva forma de encontrar valor</div>
-      <h1>Más que bienes.<br><em>Grandes oportunidades.</em></h1>
-      <p>Conectamos personas con bienes extraordinarios. Descubre una selección de inmuebles, vehículos, joyas y oportunidades que merecen una mirada diferente.</p>
+      <div class="eyebrow">Una selección fuera de lo común</div>
+      <h1>Bienes extraordinarios.<br><em>Oportunidades únicas.</em></h1>
+      <p>Una vitrina exclusiva para descubrir inmuebles, vehículos, joyas y bienes especiales. Conectamos cada oportunidad con personas capaces de reconocer su verdadero valor.</p>
       <div class="hero-actions">
         <a class="btn" href="#catalogo">Explorar catálogo <span class="arrow">↗</span></a>
         <a class="btn outline" href="#vender">Quiero vender mi bien <span class="arrow">→</span></a>
@@ -216,7 +413,7 @@ footer{background:#050505;border-top:1px solid var(--line);padding:45px 0 25px}
 
 <section class="searchbar" aria-label="Búsqueda de bienes">
   <div class="wrap search-inner">
-    <div class="search-field"><label for="categorySearch">Estoy buscando</label><select id="categorySearch"><option value="all">Todas las categorías</option><option value="inmuebles">Inmuebles</option><option value="vehiculos">Vehículos</option><option value="joyas">Joyas y relojes</option><option value="otros">Otras oportunidades</option></select></div>
+    <div class="search-field"><label for="categorySearch">Estoy buscando</label><select id="categorySearch"><option value="all">Todas las categorías</option><option value="vehiculos">Vehículos</option><option value="joyas">Joyas y relojes</option></select></div>
     <div class="search-field"><label for="locationSearch">Ubicación</label><input id="locationSearch" type="text" placeholder="Ej. Medellín, Colombia"></div>
     <div class="search-field"><label for="keywordSearch">Palabra clave</label><input id="keywordSearch" type="text" placeholder="Ej. casa, SUV, reloj"></div>
     <button class="btn" id="searchButton">Buscar <span class="arrow">⌕</span></button>
@@ -248,25 +445,17 @@ footer{background:#050505;border-top:1px solid var(--line);padding:45px 0 25px}
 <section class="section category-section" id="catalogo">
   <div class="wrap">
     <div class="section-head reveal">
-      <div><div class="eyebrow">Explora nuestras categorías</div><h2>Encuentra algo <span class="gold">extraordinario.</span></h2><p class="lead">Una selección de categorías para descubrir, comparar y consultar oportunidades de alto valor.</p></div>
-      <a class="btn outline" href="#seleccion">Ver selección <span class="arrow">↗</span></a>
+      <div><div class="eyebrow">Explora nuestras categorías</div><h2>Descubre nuestro <span class="gold">catálogo.</span></h2><p class="lead">Explora nuestras categorías y descubre los bienes disponibles para compra, venta y consulta.</p></div>
+      <a class="btn outline" href="#seleccion">Ver catálogo <span class="arrow">↗</span></a>
     </div>
-    <div class="category-grid">
-      <a class="category-card reveal" href="#seleccion" data-category="joyas">
-        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=85" alt="Anillo de joyería fina" loading="lazy">
-        <span class="cat-number">01 / JOYAS</span><div class="cat-content"><h3>Joyas & relojes</h3><p>Piezas que expresan carácter, diseño y distinción.</p><div class="cat-link"><span>Explorar categoría</span><b>↗</b></div></div>
+    <div class="category-grid category-grid-two">
+      <a class="category-card reveal" id="joyas" href="#seleccion" data-category="joyas">
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=90" alt="Anillo de joyería fina sobre fondo de estudio" loading="lazy">
+        <span class="cat-number">01 / JOYAS</span><div class="cat-content"><h3>Joyas</h3><p>Piezas especiales que expresan carácter, belleza y distinción.</p><div class="cat-link"><span>Explorar joyas</span><b>↗</b></div></div>
       </a>
-      <a class="category-card reveal" href="#seleccion" data-category="vehiculos">
-        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=900&q=85" alt="Automóvil de lujo negro" loading="lazy">
-        <span class="cat-number">02 / VEHÍCULOS</span><div class="cat-content"><h3>Vehículos</h3><p>Diseño, ingeniería y experiencias sobre ruedas.</p><div class="cat-link"><span>Explorar categoría</span><b>↗</b></div></div>
-      </a>
-      <a class="category-card reveal" href="#seleccion" data-category="inmuebles">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Casa de arquitectura contemporánea" loading="lazy">
-        <span class="cat-number">03 / INMUEBLES</span><div class="cat-content"><h3>Inmuebles</h3><p>Espacios para vivir, invertir y proyectar el futuro.</p><div class="cat-link"><span>Explorar categoría</span><b>↗</b></div></div>
-      </a>
-      <a class="category-card reveal" href="#contacto" data-category="otros">
-        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=85" alt="Montañas y paisaje de gran escala" loading="lazy">
-        <span class="cat-number">04 / OPORTUNIDADES</span><div class="cat-content"><h3>Otras categorías</h3><p>Bienes especiales y nuevas posibilidades por descubrir.</p><div class="cat-link"><span>Consultar oportunidades</span><b>↗</b></div></div>
+      <a class="category-card reveal" id="vehiculos" href="#seleccion" data-category="vehiculos">
+        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1200&q=90" alt="Vehículo premium fotografiado en estudio" loading="lazy">
+        <span class="cat-number">02 / VEHÍCULOS</span><div class="cat-content"><h3>Vehículos</h3><p>Diseño, ingeniería y experiencias sobre ruedas.</p><div class="cat-link"><span>Explorar vehículos</span><b>↗</b></div></div>
       </a>
     </div>
   </div>
@@ -275,39 +464,36 @@ footer{background:#050505;border-top:1px solid var(--line);padding:45px 0 25px}
 <section class="section" id="seleccion">
   <div class="wrap">
     <div class="section-head reveal">
-      <div><div class="eyebrow">Selección destacada · Contenido demostrativo</div><h2>Oportunidades que <span class="gold">inspiran.</span></h2><p class="lead">Una muestra visual de cómo se presentarán los bienes en el catálogo final.</p></div>
-      <span style="font-size:10px;color:#8e897f;letter-spacing:.1em;text-transform:uppercase">Prototipo conceptual</span>
+      <div><div class="eyebrow">Novedades</div><h2>Lo que acaba de llegar, <span class="gold">en vivo.</span></h2><p class="lead">Conoce las últimas piezas y vehículos que se incorporan al catálogo.</p></div>
+      <span style="font-size:10px;color:#8e897f;letter-spacing:.1em;text-transform:uppercase">Nuevas incorporaciones</span>
     </div>
     <div class="featured-grid" id="listingGrid">
-      <article class="listing reveal" data-category="inmuebles" data-keywords="casa villa arquitectura medellin inmuebles">
-        <div class="listing-image"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85" alt="Residencia de diseño contemporáneo" loading="lazy"><span class="tag">Inmuebles</span><button class="save" aria-label="Guardar inmueble" data-save>♡</button></div>
-        <div class="listing-body"><span class="listing-type">Arquitectura contemporánea</span><h3>Residencia de diseño</h3><p>Espacios amplios, líneas limpias y una propuesta arquitectónica atemporal.</p><div class="listing-bottom"><span>Ubicación por confirmar</span><b>Precio a consultar</b></div></div>
-      </article>
-      <article class="listing reveal" data-category="vehiculos" data-keywords="carro suv automovil mercedes vehiculos">
+<article class="listing reveal" data-category="vehiculos" data-keywords="carro suv automovil mercedes vehiculos">
         <div class="listing-image"><img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1000&q=85" alt="Automóvil premium en estudio" loading="lazy"><span class="tag">Vehículos</span><button class="save" aria-label="Guardar vehículo" data-save>♡</button></div>
         <div class="listing-body"><span class="listing-type">Ingeniería & diseño</span><h3>Automóvil premium</h3><p>Una combinación de presencia, confort y desempeño para quienes aprecian los detalles.</p><div class="listing-bottom"><span>Ficha por confirmar</span><b>Precio a consultar</b></div></div>
       </article>
       <article class="listing reveal" data-category="joyas" data-keywords="joya anillo reloj oro diamante joyeria">
         <div class="listing-image"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=85" alt="Joyería fina con diseño clásico" loading="lazy"><span class="tag">Joyas</span><button class="save" aria-label="Guardar joya" data-save>♡</button></div>
-        <div class="listing-body"><span class="listing-type">Detalles excepcionales</span><h3>Joyería seleccionada</h3><p>Piezas con personalidad, acabados cuidados y valor más allá de lo evidente.</p><div class="listing-bottom"><span>Disponibilidad por confirmar</span><b>Precio a consultar</b></div></div>
+        <div class="listing-body"><span class="listing-type">Piezas especiales</span><h3>Joyas seleccionadas</h3><p>Piezas con personalidad, acabados cuidados y valor más allá de lo evidente.</p><div class="listing-bottom"><span>Disponibilidad por confirmar</span><b>Precio a consultar</b></div></div>
       </article>
     </div>
     <div class="center-action"><a class="btn" href="#contacto">Consultar disponibilidad <span class="arrow">↗</span></a></div>
-    <p style="text-align:center;font-size:10px;color:#777;margin-top:18px">Las imágenes y fichas de esta sección son referenciales; no representan inventario real.</p>
+    <p style="text-align:center;font-size:10px;color:#777;margin-top:18px">Las imágenes y fichas de esta sección son referenciales hasta cargar el inventario real.</p>
   </div>
 </section>
 
 <section class="section services" id="servicios">
   <div class="wrap">
     <div class="section-head reveal">
-      <div><div class="eyebrow">Qué hacemos</div><h2>Una experiencia comercial <span class="gold">a tu medida.</span></h2><p class="lead">Acompañamos la presentación y promoción de bienes con una visión enfocada en su valor y en las personas interesadas.</p></div>
+      <div><div class="eyebrow">Qué hacemos</div><h2>Servicios pensados <span class="gold">para tus bienes.</span></h2><p class="lead">Además de compra y venta, consulta nuestros servicios para separar, mantener y cuidar tus piezas especiales.</p></div>
     </div>
-    <div class="service-grid">
-      <article class="service reveal"><div class="service-icon">✦</div><h3>Promoción de bienes</h3><p>Presentación visual y comercial de propiedades, vehículos, joyas y otros bienes aprobados para el catálogo.</p></article>
-      <article class="service reveal"><div class="service-icon">⌖</div><h3>Conexión comercial</h3><p>Facilitamos el contacto entre personas interesadas y propietarios para iniciar una conversación directa.</p></article>
-      <article class="service reveal"><div class="service-icon">↗</div><h3>Visibilidad digital</h3><p>Una vitrina digital diseñada para presentar cada oportunidad con claridad, consistencia y una imagen premium.</p></article>
+    <div class="service-grid service-grid-four">
+      <article class="service reveal"><div class="service-icon">↔</div><h3>Compra y venta</h3><p>Te acompañamos a conectar con personas interesadas en comprar o vender joyas y bienes seleccionados.</p></article>
+      <article class="service reveal"><div class="service-icon">◇</div><h3>Plan separe</h3><p>Consulta las opciones disponibles para separar una pieza y conocer sus condiciones de pago.</p></article>
+      <article class="service reveal"><div class="service-icon">✦</div><h3>Mantenimiento</h3><p>Cuidado y mantenimiento de joyas para ayudar a conservar su presentación y belleza.</p></article>
+      <article class="service reveal"><div class="service-icon">⌑</div><h3>Guardianía de la joya</h3><p>Consulta nuestro servicio de resguardo y cuidado de piezas especiales, sujeto a condiciones.</p></article>
     </div>
-    <p style="font-size:10px;color:#777;margin-top:16px">*Servicios propuestos para el prototipo. El alcance, las condiciones y las comisiones deberán ser confirmados antes de publicar.</p>
+    <p style="font-size:10px;color:#777;margin-top:16px">*Confirma disponibilidad, condiciones y alcance de cada servicio antes de contratar.</p>
   </div>
 </section>
 
@@ -353,7 +539,7 @@ footer{background:#050505;border-top:1px solid var(--line);padding:45px 0 25px}
   <div class="wrap">
     <div class="footer-top">
       <div><a class="brand" href="#inicio"><!-- LOGO ORIGINAL: se carga desde la URL pública configurada en LOGO_URL al final del archivo. --><img class="brand-logo" src="" alt="Logo original de Business and Winners"><div class="brand-mark"><span>✳</span></div><div class="brand-name"><small>&nbsp;</small></div></a><p class="footer-blurb">Una vitrina comercial para descubrir, presentar y conectar oportunidades en distintas categorías de bienes.</p></div>
-      <nav class="footer-links"><a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a><a href="#catalogo">Catálogo</a><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a></nav>
+      <nav class="footer-links"><a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a><div class="nav-catalog" id="navCatalog"><button class="nav-catalog-trigger" id="catalogToggle" aria-expanded="false" aria-controls="catalogDropdown">Catálogo <span class="chevron">⌄</span></button><div class="catalog-dropdown" id="catalogDropdown"><a href="#joyas">Joyas</a><a href="#vehiculos">Vehículos</a></div></div><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a></nav>
     </div>
     <div class="footer-bottom"><span>© <span id="year"></span> Business and Winners · by Jeiz</span><span>Concepto visual de demostración · Sujeto a aprobación del cliente</span></div>
   </div>
@@ -362,6 +548,22 @@ footer{background:#050505;border-top:1px solid var(--line);padding:45px 0 25px}
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
+const catalogToggle=document.getElementById('catalogToggle');
+const navCatalog=document.getElementById('navCatalog');
+catalogToggle.addEventListener('click',()=>{
+  const open=navCatalog.classList.toggle('dropdown-open');
+  catalogToggle.setAttribute('aria-expanded',String(open));
+});
+navCatalog.querySelectorAll('.catalog-dropdown a').forEach(a=>a.addEventListener('click',()=>{
+  navCatalog.classList.remove('dropdown-open');
+  catalogToggle.setAttribute('aria-expanded','false');
+}));
+document.addEventListener('click',e=>{
+  if(!navCatalog.contains(e.target)){
+    navCatalog.classList.remove('dropdown-open');
+    catalogToggle.setAttribute('aria-expanded','false');
+  }
+});
 const menuToggle=document.getElementById('menuToggle');
 const navlinks=document.getElementById('navlinks');
 menuToggle.addEventListener('click',()=>{
@@ -370,7 +572,7 @@ menuToggle.addEventListener('click',()=>{
   menuToggle.textContent=open?'×':'☰';
 });
 navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-  navlinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='☰';
+  navlinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='☰';navCatalog.classList.remove('dropdown-open');catalogToggle.setAttribute('aria-expanded','false');
 }));
 
 const toast=document.getElementById('toast');
@@ -424,7 +626,7 @@ document.getElementById('waButton').addEventListener('click',()=>{
 // PEGA AQUÍ LA URL PÚBLICA DIRECTA DEL LOGO GUARDADO EN TU NUBE.
  // Ejemplo: const LOGO_URL = 'https://tu-nube.com/carpeta/logo.png';
  // Debe ser una URL de imagen accesible públicamente, no una página de vista previa.
-const LOGO_URL = 'https://res.cloudinary.com/rgriiass/image/upload/v1792172339/bussines--logo.png';
+const LOGO_URL = 'https://res.cloudinary.com/rgriiass/image/upload/v1792696268/bussiness-y-winners-logo.png';
 if (LOGO_URL.trim()) {
   document.querySelectorAll('.brand-logo').forEach(img => {
     img.src = LOGO_URL.trim();
